@@ -39,7 +39,7 @@ function expect(target) {
 
 function Dog(config) {
   config = config || {}; // Mady's suggestion to account for a parameter not being passed in
-  _.defaults(config, {hungry: true}); //Was struggling with the hungry property because of the Boolean value, so I set defaults to account for the third test
+  _.defaults(config, {hungry: true}); //Was struggling with the hungry property because of the Boolean value, so I set defaults to make the third test pass
   this.status = 'normal';
   this.color = config.color;
   this.hungry = config.hungry;

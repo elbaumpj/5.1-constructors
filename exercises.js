@@ -37,10 +37,31 @@ function expect(target) {
 //
 // Only add code to *THIS* section!
 
-// ????????
-// ????????
-// ????????
+function Dog(config) {
+  _.defaults(config, {hungry: true});
+  config = config || {}; //Mady's suggestion to account for a parameter not being passed in
+  this.status = 'normal';
+  this.color = config.color;
+  this.hungry = config.hungry;
+}
 
+
+
+
+
+function Human(config) {
+  _.defaults(config, {cool: false});
+  config = config || {};
+  this.cool = config.cool;
+}
+
+Human.prototype.pet = function(dog){
+    dog.status = 'happy';
+}
+
+Human.prototype.feed = function(dog){
+    dog.hungry = false;
+}
 
 //        __
 //   ____/ /___  ____ ______

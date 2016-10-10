@@ -38,8 +38,8 @@ function expect(target) {
 // Only add code to *THIS* section!
 
 function Dog(config) {
-  _.defaults(config, {hungry: true});
-  config = config || {}; //Mady's suggestion to account for a parameter not being passed in
+  config = config || {}; // Mady's suggestion to account for a parameter not being passed in
+  _.defaults(config, {hungry: true}); //Was struggling with the hungry property because of the Boolean value, so I set defaults to account for the third test
   this.status = 'normal';
   this.color = config.color;
   this.hungry = config.hungry;
@@ -50,9 +50,8 @@ function Dog(config) {
 
 
 function Human(config) {
-  _.defaults(config, {cool: false});
   config = config || {};
-  this.cool = config.cool;
+  this.cool = config.cool || false;
 }
 
 Human.prototype.pet = function(dog){
